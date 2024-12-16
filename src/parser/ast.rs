@@ -1159,7 +1159,7 @@ impl Expr {
                 let ms = Expr::MatrixSelector(MatrixSelector { vs, range });
                 Ok(ms)
             }
-            other => Err(format!("ranges only allowed for vector selectors, not expected: {other}").into()),
+            other => Err(format!("ranges only allowed for vector selectors, not expected: {:?}", other).into()),
         }
     }
 
